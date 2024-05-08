@@ -1,5 +1,6 @@
 from random import randrange
-from turtle import setup, hideturtle, tracer, update, clear, ontimer, listen, onkey, done
+from turtle import setup, hideturtle, tracer, 
+update, clear, ontimer, listen, onkey, done
 from freegames import square, vector
 
 food = vector(0, 0)

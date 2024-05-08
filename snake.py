@@ -1,20 +1,23 @@
 from random import randrange
-from turtle import setup, hideturtle, tracer, 
-update, clear, ontimer, listen, onkey, done
+from turtle import (setup, hideturtle, tracer,
+                    update, clear, ontimer, listen, onkey, done)
 from freegames import square, vector
 
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
 
+
 def change(x, y):
     """Change snake direction."""
     aim.x = x
     aim.y = y
 
+
 def inside(head):
     """Return True if head inside boundaries."""
     return -200 < head.x < 190 and -200 < head.y < 190
+
 
 def move():
     """Move snake forward one segment."""
@@ -43,6 +46,7 @@ def move():
     square(food.x, food.y, 9, 'green')
     update()
     ontimer(move, 100)
+
 
 setup(420, 420, 370, 0)
 hideturtle()
